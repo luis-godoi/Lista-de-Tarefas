@@ -1,0 +1,20 @@
+header {
+  background-color: var(--gray-300);
+  height: 10.8125rem;
+  display: flex;
+  justify-content: center;
+
+  & img {
+    width: 6.5625rem;
+  }
+}
+
+@media (width >= 80em) {
+  header {
+    height: 12,5rem;
+
+    & img {
+      width: 8.75rem;
+    }
+  }
+}
