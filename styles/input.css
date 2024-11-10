@@ -1,0 +1,44 @@
+.task-input {
+  position: relative;
+  margin-top: -1.7rem;
+
+  display: flex;
+  gap: 8px;
+
+  & input {
+    height: 3.25rem;
+    font: var(--fs-lg)/140% var(--fw-reg);
+    font-family: var(--ff);
+  
+    padding-block: .94rem;
+    padding-left: 1.125rem;
+  
+    border-radius: 8px;
+    border: solid 1px var(--gray-300);
+
+    background-color: var(--gray-100);
+    color: var(--gray-500);
+  }
+
+  & button {
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: var(--purple-dark);
+    border: none;
+    border-radius: 8px;
+
+    & img {
+      width: 1rem;
+    }
+  }
+}
+
+
+
+@media (width >= 80em) {
+  .task-input {
+    & input {
+      width: 38.625rem;
+    }
+  }
+}
