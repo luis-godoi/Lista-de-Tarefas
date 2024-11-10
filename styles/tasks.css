@@ -2,7 +2,8 @@
   margin-top: 1.5rem;
 
   color: var(--gray-500);
-  font: var(--fs-md)/120;
+  font-size: var(--fs-md);
+  line-height: 120%;
   font-weight: var(--fw-sb);
   font-family: var(--ff);
 
@@ -14,7 +15,8 @@
 .created {
   display: flex;
   align-items: center;
-  font: var(--fs-md)/120;
+  font-size: var(--fs-md);
+  line-height: 120%;
   font-family: var(--ff);
   font-weight: var(--fw-sb);
 
