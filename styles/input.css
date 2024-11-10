@@ -7,7 +7,9 @@
 
   & input {
     height: 3.25rem;
-    font: var(--fs-lg)/140% var(--fw-reg);
+    width: 16.6875rem;
+    font: var(--fs-lg)/140;
+    font-weight: var(--fw-reg);
     font-family: var(--ff);
   
     padding-block: .94rem;
