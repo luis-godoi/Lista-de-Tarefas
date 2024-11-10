@@ -36,13 +36,26 @@
 
         <div class="separator"></div>
 
-        <section class="empty">
+        <section class="empty" id="empty-section">
           <img src="assets/ClipboardTextRegular.svg" alt="">
           <div>
             <strong>Você ainda não tem tarefas cadastradas</strong>
             <p>Crie tarefas e organize seus itens a fazer</p>
           </div>
         </section>
+
+        <ul role="list" class="list" id="task-list">
+          <li class="task">
+            <input type="checkbox" name="list-items" id="items" class="hidden-checkbox" checked>
+            <div class="circle-regular">
+              <img src="assets/CircleRegular.svg" alt="">
+            </div>
+            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <div class="trash-regular">
+              <img src="assets/TrashRegular.svg" alt="">
+            </div>
+          </li>
+        </ul>
     </main>
   </body>
 </html>

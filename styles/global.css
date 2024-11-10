@@ -31,6 +31,8 @@
   --danger: #C2464D;
 
   --pd-x: 1.5rem;
+
+  background-color: var(--gray-100);
 }
 
 .container {
