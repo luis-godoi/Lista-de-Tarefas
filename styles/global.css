@@ -37,6 +37,10 @@
   padding-inline: var(--pd-x);
 }
 
+.desktop-only {
+  display: none;
+}
+
 @media (width >= 80em) {
   .container {
     padding-inline: 22rem;

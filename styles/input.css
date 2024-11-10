@@ -42,5 +42,22 @@
     & input {
       width: 38.625rem;
     }
+
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding-inline: 3rem;
+
+      & .desktop-only {
+        display: block;
+
+        color: var(--gray-100);
+        font-size: var(--fs-md);
+        line-height: 140%;
+        font-weight: var(--fw-bold);
+      }
+    }
   }
 }
