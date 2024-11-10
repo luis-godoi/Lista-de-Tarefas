@@ -51,6 +51,14 @@ ul {
     }
   }
 
+  & .task:hover {
+    background-color: var(--gray-200);
+
+    & .circle-regular {
+      content: url('/./assets/CircleDuotone.svg');
+    }
+  }
+
   &:has(:checked) {
     & .task {
       background-color: var(--gray-100);
@@ -60,6 +68,14 @@ ul {
 
       .circle-regular {
         content: url('/./assets/CheckCircleFill.svg');
+      }
+    }
+
+    & .task:hover {
+      background-color: var(--gray-200);
+
+      & .circle-regular {
+        content: url('/./assets/CheckCircleFillDuotone.svg');
       }
     }
   }
