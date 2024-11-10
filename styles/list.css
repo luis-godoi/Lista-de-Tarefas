@@ -2,6 +2,10 @@ ul[role="list"] {
   list-style: none;
 }
 
+#task-list {
+  display: none;
+}
+
 ul {
 
   & .task {
