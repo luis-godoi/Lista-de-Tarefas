@@ -38,6 +38,21 @@ function addTask() {
         trashImg.src = "assets/TrashRegular.svg";
         trash.appendChild(trashImg);
 
+        // Adicionar um evento de clique à lixeira para remover o elemento pai
+        trash.addEventListener("click", () => {
+            taskList.removeChild(newTask); // Remove o <li> da lista de tarefas
+
+            // Atualizar o contador de tarefas criadas
+            taskCounter--;
+            createdCount.textContent = taskCounter;
+
+            // Verificar se a lista está vazia e exibir a seção "empty" se necessário
+            if (taskCounter === 0) {
+                taskList.style.display = "none";
+                emptySection.style.display = "block";
+            }
+        });
+
         // Adicionar os elementos à <li>
         newTask.appendChild(checkbox);
         newTask.appendChild(circle);

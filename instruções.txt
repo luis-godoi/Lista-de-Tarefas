@@ -1,16 +1,16 @@
 A aplicação deve conter as seguintes funcionalidades:
 
-1 Visualização de uma mensagem quando não tem uma tarefa cadastrada;
+1 Visualização de uma mensagem quando não tem uma tarefa cadastrada; ✅
 
-2 Criação de uma nova tarefa;
+2 Criação de uma nova tarefa; ✅
 
 3 Possibilidade de marcar uma tarefa como concluída;
 
-4 Visualização da quantidade de tarefas que já foram criadas;
+4 Visualização da quantidade de tarefas que já foram criadas; ✅
 
 5 Visualização da quantidade de tarefas que já foram concluídas;
 
-6 Possibilidade de excluir uma tarefa;
+6 Possibilidade de excluir uma tarefa; ✅
 
 
 
