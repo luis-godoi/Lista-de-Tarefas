@@ -2,18 +2,14 @@ ul[role="list"] {
   list-style: none;
 }
 
-#task-list {
-  display: none;
-}
-
 ul {
-
   & .task {
     background-color: var(--gray-300);
     border: 1px solid var(--gray-400);
     border-radius: 0.5rem;
 
     padding: 0.75rem;
+    margin-bottom: 0.75rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -27,9 +23,6 @@ ul {
     font-size: var(--fs-sm);
     line-height: 140%;
 
-    & .hidden-checkbox {
-      display: none;
-    }
 
     & .circle-regular,
     .trash-regular {
@@ -53,7 +46,17 @@ ul {
         }
       }
     }
+
+    &:hover {
+      background-color: var(--gray-200);
+  
+      & .circle-regular {
+        content: url('/./assets/CircleDuotone.svg');
+      }
+    }
   }
+
+  
 
   & .checked {
     background-color: var(--gray-100);
@@ -71,14 +74,6 @@ ul {
       & .circle-regular {
         content: url('/./assets/CheckCircleFillDuotone.svg');
       }
-    }
-  }
-
-  & .task:hover {
-    background-color: var(--gray-200);
-
-    & .circle-regular {
-      content: url('/./assets/CircleDuotone.svg');
     }
   }
 }

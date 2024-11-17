@@ -1,19 +1,21 @@
 .task-input {
   position: relative;
   margin-top: -1.7rem;
+  max-width: 100%;
 
   display: flex;
   gap: 8px;
 
   & input {
+    flex-grow: 1;
+    min-width: 0;
     height: 3.25rem;
-    width: 16.6875rem;
     font: var(--fs-lg)/140;
     font-weight: var(--fw-reg);
     font-family: var(--ff);
   
     padding-block: .94rem;
-    padding-left: 1.125rem;
+    padding-inline: 1.125rem;
   
     border-radius: 8px;
     border: solid 1px var(--gray-300);
@@ -29,6 +31,7 @@
   }
 
   & button {
+    flex-shrink: 0;
     width: 3.25rem;
     height: 3.25rem;
     background-color: var(--purple-dark);
