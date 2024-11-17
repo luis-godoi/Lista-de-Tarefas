@@ -55,32 +55,30 @@ ul {
     }
   }
 
-  & .task:hover {
-    background-color: var(--gray-200);
+  & .checked {
+    background-color: var(--gray-100);
+
+    color: var(--gray-500);
+    text-decoration: line-through;
 
     & .circle-regular {
-      content: url('/./assets/CircleDuotone.svg');
-    }
-  }
-
-  &:has(:checked) {
-    & .task {
-      background-color: var(--gray-100);
-
-      color: var(--gray-500);
-      text-decoration: line-through;
-
-      .circle-regular {
-        content: url('/./assets/CheckCircleFill.svg');
-      }
+      content: url('/./assets/CheckCircleFill.svg');
     }
 
-    & .task:hover {
+    &:hover {
       background-color: var(--gray-200);
 
       & .circle-regular {
         content: url('/./assets/CheckCircleFillDuotone.svg');
       }
+    }
+  }
+
+  & .task:hover {
+    background-color: var(--gray-200);
+
+    & .circle-regular {
+      content: url('/./assets/CircleDuotone.svg');
     }
   }
 }
