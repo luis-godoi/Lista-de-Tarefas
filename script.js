@@ -21,7 +21,7 @@ function addNewTask() {
         updateSectionDisplay();
     }
 
-    inputField.value = "";  // Limpa o campo de input após adicionar a tarefa
+    inputField.value = "";
 }
 
 addButton.onclick = () => {
@@ -36,7 +36,6 @@ inputField.addEventListener("keydown", function (event) {
     }
 });
 
-// Função para adicionar uma nova tarefa
 function addTask(newTask) {
 
     if (newTask.text !== "") {
@@ -44,7 +43,6 @@ function addTask(newTask) {
         newItem.classList.add("task");
         newItem.id = newTask.id;
 
-        // Criar o círculo regular
         const circle = document.createElement("div");
         circle.classList.add("circle-regular");
         const circleImg = document.createElement("img");
@@ -52,11 +50,9 @@ function addTask(newTask) {
         circleImg.classList.add("circle-img");
         circle.append(circleImg);
 
-        // Criar o parágrafo com o texto da tarefa
         const taskParagraph = document.createElement("p");
         taskParagraph.textContent = newTask.text;
 
-        // Criar o ícone de lixeira
         const trash = document.createElement("div");
         trash.classList.add("trash-regular");
         const trashImg = document.createElement("img");
@@ -64,22 +60,18 @@ function addTask(newTask) {
         trashImg.classList.add("trash-img")
         trash.appendChild(trashImg);
 
-        // Adicionar os elementos à <li>
         newItem.append(circle, taskParagraph, trash);
 
-        // Adicionar a nova tarefa à lista
         taskList.append(newItem);
 
-        // Atualizar o contador de tarefas criadas
         taskCounter++;
         createdCount.textContent = taskCounter;
 
-        // Limpar o campo de input
         inputField.value = "";
     }
 }
 
-// Adicionar um evento de clique à lixeira para remover o elemento pai
+
 taskList.addEventListener("click", function (event) {
     if(event.target.classList.contains("trash-img")) {
         const item = event.target.closest(".task");
@@ -89,9 +81,13 @@ taskList.addEventListener("click", function (event) {
         createdCount.textContent = taskCounter;
         updateSectionDisplay()
 
-        const taskIndex = tasks.findIndex(task => task.id === parseInt(item.id)); // Remova a tarefa do array
+        const taskIndex = tasks.findIndex(task => task.id === parseInt(item.id));
+        if (item.classList.contains("checked")) {
+            checkedCounter--;
+        }
         tasks.splice(taskIndex, 1);
 
+        completedCount.textContent = checkedCounter;
         updateSectionDisplay()
     }
 });
@@ -118,7 +114,6 @@ taskList.addEventListener("click", function (event) {
             checkedCounter--;
         }
 
-        // Atualiza a exibição do número de tarefas "checked"
         completedCount.textContent = checkedCounter;
     }
 });
